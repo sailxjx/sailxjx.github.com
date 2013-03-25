@@ -1,0 +1,13 @@
+extends _includes/_layout
+block stylesheet
+  link(href="/static/css/index.css", rel="stylesheet")
+block content
+  div.container
+    h2 A List of Demos:
+    dl.dl-horizontal.font-medium
+      dt
+        a(href="/fitball/dom") Fitball:
+      dd a 3D tag cloud plugin written in coffeescript.
+block javascript
+  script
+    $('ul.nav').find('li')[0].className = 'active';
