@@ -1,0 +1,10 @@
+{
+    "name": "colorfull",
+    "description": "A fullscreen color picker",
+    "main": "index.coffee",
+    "version": "0.0.1",
+    "private": false,
+    "dependencies": {
+        "ejs": "*"
+    }
+}
