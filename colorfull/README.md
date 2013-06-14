@@ -2,7 +2,7 @@ Colorfull
 
 ===
 
-A fullscreen color picker, inspired by the guy named Jony Ive.
+A fullscreen color animation, inspired by the guy named Jony Ive. Maybe someday I'll change it to a useful color picker.
 
 [Some Jokes](http://jonyiveredesignsthings.tumblr.com/)
 
