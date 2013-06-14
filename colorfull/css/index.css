@@ -1,9 +1,20 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Georgia, sans-serif, Arial;
 }
 
-.colorfull-canvas {
+a {
+    color: skyblue;
+    text-decoration: none;
+}
+
+.copyleft {
+    position: fixed;
+    padding: 5px;
     width: 100%;
-    border: none;
+    bottom: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
 }
