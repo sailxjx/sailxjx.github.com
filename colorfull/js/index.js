@@ -27,14 +27,10 @@
             height = $canvas.height(),
             x1, y1, x2, y2, frames = duration * 1000 / 30;
         lastDegree = typeof lastDegree === 'undefined' ? 0 : (lastDegree + Math.PI * 2 / frames) % (Math.PI * 2);
-        console.log(lastDegree);
         x1 = width * (1 + Math.cos(lastDegree)) / 2;
         y1 = height * (1 + Math.sin(lastDegree)) / 2;
         x2 = width * (1 + Math.cos(lastDegree + Math.PI)) / 2;
         y2 = height * (1 + Math.sin(lastDegree + Math.PI)) / 2;
-
-        console.log([x1, y1, x2, y2]);
-
         return [x1, y1, x2, y2];
       };
 
