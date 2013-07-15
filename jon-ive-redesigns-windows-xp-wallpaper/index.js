@@ -38,8 +38,6 @@
       }
 
       function transition() {
-        var start = new Date();
-
         var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
         for(var i = 0; i < imgData.data.length; i += 4) {
           for(var n = 0; n < 3; n ++) {
@@ -47,9 +45,6 @@
           }
         }
         ctx.putImageData(imgData, 0, 0);
-
-        console.log(new Date() - start);
-
       }
 
       function clean() {

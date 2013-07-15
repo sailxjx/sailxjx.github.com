@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Georgia, sans-serif, Arial;
+    line-height: 30px;
 }
 
 a {
@@ -12,9 +13,20 @@ a {
 .control-panel {
     position: fixed;
     top: 20px;
-    left: 100px;
+    right: 20px;
+    padding: 10px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 3px;
 }
 
-.xp-canvas {
-    /*display: none;*/
+.control-panel dl {
+    margin: 0;
+}
+
+.control-panel dl dt {
+    float: left;
+}
+
+.control-panel dl dd {
+    margin: 0 0 0 150px;
 }

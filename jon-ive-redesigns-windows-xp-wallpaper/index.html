@@ -17,9 +17,13 @@
     </head>
     <body>
         <div class="control-panel">
-            <input id="xp-color-start" class="ctrl-color" type="color" value="#F800FF" />
-            <input id="xp-color-end" class="ctrl-color" type="color" value="#32FFC6" />
-            <input id="xp-color-range" class="ctrl-range" type="range" min="0" max="255">
+            <h3>Try to change the color range:</h3>
+            <dl>
+                <dt>Color Range From:</dt>
+                <dd><input id="xp-color-start" class="ctrl-color" type="color" value="#F800FF" /></dd>
+                <dt>Color Range To:</dt>
+                <dd><input id="xp-color-end" class="ctrl-color" type="color" value="#32FFC6" /></dd>
+            </dl>
         </div>
         <canvas id="xp-canvas" class="xp-canvas"></canvas>
         <img id="xp-wallpaper" src="windows_xp_wallpaper.jpg" alt="" style="display:none"/>
