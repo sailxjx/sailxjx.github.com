@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, sans-serif, Arial;
+}
+
+a {
+    color: skyblue;
+    text-decoration: none;
+}
+
+.control-panel {
+    position: fixed;
+    top: 20px;
+    left: 100px;
+}
+
+.xp-canvas {
+    /*display: none;*/
+}
