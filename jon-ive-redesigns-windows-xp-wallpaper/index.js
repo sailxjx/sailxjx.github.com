@@ -59,7 +59,9 @@
 
   })(jQuery);
 
-  $('#xp-canvas').ive();
+  $('#xp-wallpaper').ready(function() {
+    $('#xp-canvas').ive();
+  });
 
   var colorTimer;
 
