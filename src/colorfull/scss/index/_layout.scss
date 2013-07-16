@@ -1,8 +1,15 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
     font-family: Georgia, sans-serif, Arial;
-    background: #CCC;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    @include transition(background);
+    @include gradient-radial(hsla(0, 100%, 50%, 1), hsla(0, 0%, 50%, 1));
 }
 
 a {
