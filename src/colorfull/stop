@@ -1,0 +1,3 @@
+#!/bin/bash
+[[ -f .coffee.pid ]] && kill $(cat .coffee.pid) && rm .coffee.pid
+[[ -f .scss.pid ]] && kill $(cat .scss.pid) && rm .scss.pid
