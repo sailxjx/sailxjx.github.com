@@ -16,8 +16,20 @@
         </script>
     </head>
     <body>
-        <canvas id="canvas" class="canvas"></canvas>
-        <!-- <div id="bg" class="bg"></div> -->
+        <div class="dashboard">
+          <div class="color-list">
+            <input type="text" id="c-hex" spellcheck="false" value="hex">
+            <input type="text" id="c-rgba" spellcheck="false" value="rgba">
+            <input type="text" id="c-hsla" spellcheck="false" value="hsla">
+          </div>
+          <div class="color-preview">
+
+          </div>
+        </div>
+        <canvas id="canvas" class="canvas">
+          your browser don't support canvas
+        </canvas>
+        <p class="joke">Jony Ive redesigns wallpaper. <a href="http://jonyiveredesignsthings.tumblr.com/" target="_blank">Just a joke</a></p>
         <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
         <script src="index.js"></script>
     </body>

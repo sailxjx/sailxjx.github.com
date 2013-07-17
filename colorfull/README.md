@@ -8,6 +8,6 @@ A fullscreen color animation, inspired by the guy named Jony Ive. Maybe someday 
 
 ## TODO
 
-* add color picker
+* add color picker (done)
 * self chosen colors
 * other animations
