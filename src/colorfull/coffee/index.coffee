@@ -1,32 +1,4 @@
-class Colorfull
-  constructor: ->
-    @canvas = document.getElementById('canvas')
-    @interval = 30
-    @timer = null
-    @color = 0
-  init: ->
-    @resize()
-    @ctx = @canvas.getContext('2d')
-    return this
-  roll: =>
-    @timer = setInterval (=>
-      grd = @ctx.createRadialGradient(@canvas.width / 2,
-      @canvas.height / 2, 0, @canvas.width / 2,
-      @canvas.height / 2, (@canvas.width + @canvas.height) / 2);
-      grd.addColorStop(0, "hsla(#{@color % 360}, 100%, 50%, 1)");
-      grd.addColorStop(1, "hsla(#{@color % 360}, 20%, 50%, 1)");
-      @ctx.fillStyle = grd;
-      @ctx.fillRect(0, 0, @canvas.width, @canvas.height)
-      @color += 1
-      ), @interval
-  stop: =>
-    clearInterval(@timer) if @timer?
-  resize: =>
-    @canvas.height = document.height
-    @canvas.width = document.width
-  showColor: (e) =>
-    pixel = @ctx.getImageData(e.clientX, e.clientY, 1, 1)
-    return pixel.data
+# predefined functions
 
 toRgba = (data) ->
   [r, g, b, a] = data
@@ -58,9 +30,52 @@ toHex = (data) ->
     return ('00' + str.toString(16)).substr(-2)
   return "##{toFullHex(r)}#{toFullHex(g)}#{toFullHex(b)}"
 
+# Colorfull
+
+class Colorfull
+  constructor: ->
+    @canvas = document.getElementById('canvas')
+    @interval = 30
+    @timer = null
+    @color = 0
+    @running = false
+  init: ->
+    @resize()
+    @ctx = @canvas.getContext('2d')
+    return this
+  roll: =>
+    @timer = setInterval (=>
+      grd = @ctx.createRadialGradient(@canvas.width / 2,
+      @canvas.height / 2, 0, @canvas.width / 2,
+      @canvas.height / 2, (@canvas.width + @canvas.height) / 2);
+      grd.addColorStop(0, "hsla(#{@color}, 100%, 50%, 1)");
+      grd.addColorStop(1, "hsla(#{@color}, 20%, 50%, 1)");
+      @ctx.fillStyle = grd;
+      @ctx.fillRect(0, 0, @canvas.width, @canvas.height)
+      @color = (@color + 1) % 360
+      ), @interval
+    @running = true
+    return this
+  stop: =>
+    clearInterval(@timer) if @timer?
+    @running = false
+    return this
+  toggle: =>
+    if @running then @stop() else @roll()
+    return this
+  resize: =>
+    @canvas.height = document.height
+    @canvas.width = document.width
+  showColor: (e) =>
+    pixel = @ctx.getImageData(e.clientX, e.clientY, 1, 1)
+    return pixel.data
+
+# color actions
+
 colorfull = new Colorfull()
 colorfull.init().roll()
-$('#canvas').bind 'mousemove', (e) ->
+
+colorPick = (e)->
   colorData = colorfull.showColor(e)
   data = [colorData[0], colorData[1], colorData[2], colorData[3]]
   if data?
@@ -72,5 +87,33 @@ $('#canvas').bind 'mousemove', (e) ->
       'background': rgba
       })
 
+mouse =
+  move: false
+  bindMove: =>
+    return false if mouse.move
+    $('#canvas').bind('mousemove', colorPick)
+    mouse.move = true
+  unbindMove: =>
+    return false until mouse.move
+    $('#canvas').unbind('mousemove')
+    mouse.move = false
+
+mouse.bindMove()
+$('#canvas').bind 'click', (e) ->
+  mouse.unbindMove()
+  colorPick(e)
+
+# joke line
 $('.joke').fadeOut(10000);
 
+# shortcuts
+
+$(document).bind 'keydown', 'shift+/', (e) ->  # ?
+  $shortcut = $('.shortcut')
+  $shortcut.fadeToggle(300)
+
+$(document).bind 'keydown', 's', (e) ->
+  colorfull.toggle()
+
+$(document).bind 'keydown', 'm', (e) ->
+  mouse.bindMove()

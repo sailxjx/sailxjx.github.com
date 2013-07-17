@@ -16,6 +16,18 @@
         </script>
     </head>
     <body>
+        <div class="shortcut">
+          <p>Keyboard</p>
+          <dl class="shortcut-content">
+            <dt>?</dt><dd>切换帮助页面</dd>
+            <dt>s</dt><dd>开始/暂停动画</dd>
+            <dt>m</dt><dd>开始滑动取色</dd>
+          </dl>
+          <p>Mouse</p>
+          <dl class="shortcut-content">
+            <dt>click</dt><dd>拾取颜色并停止滑动取色</dd>
+          </dl>
+        </div>
         <div class="dashboard">
           <div class="color-list">
             <input type="text" id="c-hex" spellcheck="false" value="hex">
@@ -31,6 +43,7 @@
         </canvas>
         <p class="joke">Jony Ive redesigns wallpaper. <a href="http://jonyiveredesignsthings.tumblr.com/" target="_blank">Just a joke</a></p>
         <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+        <script src="jquery.hotkeys.min.js"></script>
         <script src="index.js"></script>
     </body>
 </html>
