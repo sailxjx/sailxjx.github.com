@@ -1,0 +1,20 @@
+{
+  "name": "homepage",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sailxjx/sailxjx.github.com",
+  "authors": [
+    "sailxjx <sailxjx@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}
