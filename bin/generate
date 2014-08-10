@@ -1,9 +1,0 @@
-#!/bin/bash
-BASE_DIR="$(dirname $0)/.."
-SRC_DIRS=$(ls "${BASE_DIR}/src")
-for DIR in ${SRC_DIRS}
-do
-    if [[ -f "${BASE_DIR}/src/${DIR}/Makefile" ]]; then
-        cd "${BASE_DIR}/src/${DIR}" && make generate
-    fi
-done

@@ -1,6 +1,0 @@
-#!/bin/bash
-DIR_NAME=$(basename $(pwd))
-coffee -w -o ../../${DIR_NAME} -c coffee 2>&1 1>/dev/null &
-echo $! > .coffee.pid
-scss -w -t compressed scss:../../${DIR_NAME} 2>&1 1>/dev/null &
-echo $! > .scss.pid

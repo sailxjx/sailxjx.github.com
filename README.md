@@ -1,4 +1,4 @@
-sailxjx.github.com
+jingxin.me
 ==================
 
-personal index of github
+homepage

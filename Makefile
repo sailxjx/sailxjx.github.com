@@ -1,8 +1,4 @@
-default: generate
-generate:
-	./bin/generate
+gen:
+	@echo gen
 
-clean:
-	./bin/clean
-
-.PHONY: generate clean
+.PHONY: gen 
