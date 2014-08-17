@@ -1,4 +1,4 @@
 gen:
-	@echo gen
+	@./gen.sh 
 
-.PHONY: gen 
+.PHONY: gen
