@@ -1,2 +1,46 @@
+@import "_variables"
+
 body, html
-  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif
+  font-size: 14px
+  color: $color-font
+
+a
+  text-decoration: none
+  color: #667480
+  &:hover
+    color: #508FAB
+
+header
+  margin: 0 auto
+  width: 900px
+  .sketch
+    font-size: 18px
+    margin: 30px 0 30px 0
+  .navbar
+    border-bottom: 1px solid #eee
+    border-top: 1px solid #eee
+    ul
+      list-style: none
+      height: 18px
+      font-size: 18px
+      padding: 0
+      li
+        list-style: none
+        float: left
+        display: inline-block
+        padding: 0 15px 0 0
+
+main
+  margin: 0 auto
+  width: 900px
+  article
+    h1.article-title
+      font-size: 50px
+      text-align: center
+
+footer
+  margin: 0 auto
+  width: 900px
+
+
