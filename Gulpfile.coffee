@@ -3,28 +3,29 @@ watch = require 'gulp-watch'
 coffee = require 'gulp-coffee'
 stylus = require 'gulp-stylus'
 jade = require 'gulp-jade'
-plumber = require('gulp-plumber')
+plumber = require 'gulp-plumber'
+marked = require 'marked'
 
 gulp.task 'watch', ->
   gulp
-    .src "coffeescripts/**/*.coffee"
+    .src "scripts/**/*.coffee"
     .pipe watch()
     .pipe plumber()
     .pipe coffee()
-    .pipe gulp.dest('./javascripts/')
+    .pipe gulp.dest('./public/scripts/')
 
   gulp
-    .src "stylus/**/[a-z]*.styl"
+    .src "styles/**/[a-z]*.styl"
     .pipe watch()
     .pipe plumber()
     .pipe stylus()
-    .pipe gulp.dest('./stylesheets/')
+    .pipe gulp.dest('./public/styles/')
 
   gulp
-    .src 'index.jade', read: false
+    .src 'views/index.jade', read: false
     .pipe plumber()
     .pipe watch()
     .pipe jade()
-    .pipe gulp.dest('./')
+    .pipe gulp.dest('./public/')
 
 gulp.task 'default', ->

@@ -1,5 +1,4 @@
 .sass-cache
 node_modules
 .scss.pid
-.coffee.pid
-blog
+public/

@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+  head
+    title CodeBean
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Codebean - Homepage of Xu Jingxin")
+    link(rel="stylesheet", href="/stylesheets/index.css")
+    script(id="gta-main", src="vendor/gta/lib/index.js", data-baidu="43f786342ba0680af108248b28280fdb", data-google="UA-33186961-1", data-mixpanel="204d761f0c52d9ddcf031ec634f98772")
+  body
+    header(role="banner")
+      p.sketch
+        a(href="/") Xu Jingxin - Developer
+      nav.navbar
+        ul
+          li.nav.active Home
+          li.nav
+            a(href="/blog") Blog
+          li.nav
+            a(href="/projects") Projects
+          li.nav
+            a(href="/playground") Playground
+    main
+      article
+        h1.article-title About
+        p
+          | I'm a developer and my name is Xu Jingxin.
+          | I used to be a PHP developer, and now most of time
+          | I develop projects with CoffeeScript.
+          | It is an amazing and mystery language, if you are in the same way as I think,
+          | we may have a talk, perhaps we have a lot in common...
+          | In the left time I also coding in Ruby/ObjectiveC/Python/Shell and other thing else.
+        p
+          | I have some interesting projects, most of them are hosted on github.
+          a(href="https://github.com/sailxjx/sundae", target="_blank")  sundae
+          |  is lightweight restful framework based on express, it has some interesting features borrowed from rails,
+          | such as restful route declaration and hooks of actions.
+          a(href="https://github.com/sailxjx/graceful-logger", target="_blank")  graceful-logger
+          |  is a slim log module written in CoffeeScript, it output colorful or timestamped logs.
+          | You can define the log format by yourself. The full list of my projects are listed on the
+          a(href="/projects")  projects
+          |  page.
+        p
+          | I am currently working for
+          a(href="https://www.teambition.com", target="_blank")  Teambition
+          | . It is a project management tool, just like trello and asana.
+        p
+          | You can find my on
+
+          a(href="mailto:sailxjx@gmail.com?subject=Just%20Say%20Hello%3F") sailxjx@gmail.com
+    footer
+      copyright © 2014 Xu Jingxin
+
