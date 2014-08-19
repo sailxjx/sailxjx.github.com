@@ -5,6 +5,7 @@ stylus = require 'gulp-stylus'
 jade = require 'gulp-jade'
 plumber = require 'gulp-plumber'
 marked = require 'marked'
+fs = require 'fs'
 
 gulp.task 'watch', ->
   gulp
@@ -26,7 +27,8 @@ gulp.task 'watch', ->
     .src 'views/index.jade', read: false
     .pipe plumber()
     .pipe watch()
-    .pipe jade()
+    .pipe jade
+      data: txt: marked.parse(fs.readFileSync('views/about.md', {encoding: 'utf8'}))
     .pipe gulp.dest('./public/')
 
   # Move vendor
