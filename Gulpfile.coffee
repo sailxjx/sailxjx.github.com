@@ -21,11 +21,17 @@ gulp.task 'watch', ->
     .pipe stylus()
     .pipe gulp.dest('./public/styles/')
 
+  # Render views
   gulp
     .src 'views/index.jade', read: false
     .pipe plumber()
     .pipe watch()
     .pipe jade()
     .pipe gulp.dest('./public/')
+
+  # Move vendor
+  gulp
+    .src 'vendor/**'
+    .pipe gulp.dest('./public/vendor')
 
 gulp.task 'default', ->
