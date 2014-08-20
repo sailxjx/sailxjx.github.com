@@ -36,7 +36,7 @@ gulp.task 'watch', ->
     .pipe plumber()
     .pipe watch()
     .pipe rename basename: "index"
-    .pipe jade()
+    .pipe jade data: txt: marked.parse(fs.readFileSync('views/projects.md', {encoding: 'utf8'}))
     .pipe gulp.dest './public/projects/'
 
   # Move vendor
@@ -63,7 +63,7 @@ gulp.task 'default', ->
   gulp
     .src 'views/projects.jade'
     .pipe rename basename: "index"
-    .pipe jade()
+    .pipe jade data: txt: marked.parse(fs.readFileSync('views/projects.md', {encoding: 'utf8'}))
     .pipe gulp.dest './public/projects/'
 
   gulp
