@@ -12,6 +12,9 @@ a
   &:hover
     color: color-linkhover
 
+.clear
+  clear: both
+
 header
   margin: 0 auto
   width: 900px
@@ -30,22 +33,38 @@ header
         list-style: none
         float: left
         display: inline-block
-        padding: 0 15px 0 0
+        padding: 0 25px 0 0
+        text-transform: capitalize
 
 main
+  width: 900px
   margin: 0 auto
-  width: 600px
+  h1
+    font-size: 50px
+    text-align: center
   article
     letter-spacing: 0.2px
     line-height: 30px
-    h1
-      font-size: 50px
-      text-align: center
+    width: 600px
+    margin: 0 auto
+  ul.artist
+    list-style: none
+    padding: 0
+    li
+      list-style: none
+      float: left
+      display: inline-block
+      margin: 0 30px 30px 0
+      width: 256px
+      height: 144px
+      border: 1px solid #dedede
+      border-radius: 3px
+      overflow: hidden
+      img
+        width: 256px
 
 footer
   padding-top: 10px
   margin: 50px auto
   border-top: 1px solid color-cutline
   width: 900px
-
-

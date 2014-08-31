@@ -1,13 +1,7 @@
 extends _layout
 
-block nav
-  li.nav
-    a(href="/") Home
-  li.nav
-    a(href="/blog") Blog
-  li.nav.active Projects
-  li.nav
-    a(href="/playground") Playground
+block variables
+  - var nav = 'projects';
 
 block main
   article !{txt}

@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "gta": "~0.2.2",
-    "lightbox2": "~2.7.1"
+    "lightbox2": "~2.7.1",
+    "jquery": "~2.1.1"
   }
 }

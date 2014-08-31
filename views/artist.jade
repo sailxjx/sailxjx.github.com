@@ -1,0 +1,20 @@
+extends _layout
+
+block variables
+  - var nav = 'artist';
+
+block main
+  h1 For Fun
+  ul.artist
+    for img in imgs
+      li
+        a(href="../images/artist/#{img}", data-lightbox="artist", data-title="#{img}")
+          img(src="../images/artist/#{img}", title="#{img}", alt="#{img}")
+  p.clear
+
+block style
+  link(rel="stylesheet", href="../vendor/lightbox2/css/lightbox.css")
+
+block script
+  script(src="../vendor/jquery/jquery.min.js")
+  script(src="../vendor/lightbox2/js/lightbox.min.js")
