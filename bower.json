@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "gta": "~0.2.2"
+    "gta": "~0.2.2",
+    "lightbox2": "~2.7.1"
   }
 }
