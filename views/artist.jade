@@ -9,7 +9,7 @@ block main
     for img in imgs
       li
         a(href="../images/artist/#{img}", data-lightbox="artist", data-title="#{img}")
-          img(src="../images/artist/#{img}", title="#{img}", alt="#{img}")
+          div.img(style="background-image:url(\"../images/artist/#{img}\");")
   p.clear
 
 block style
