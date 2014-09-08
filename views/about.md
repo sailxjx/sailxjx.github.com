@@ -6,4 +6,6 @@ I have some interesting projects, most of them are hosted on github. [sundae](ht
 
 I am currently working for [Teambition](https://www.teambition.com). It is a project management tool, just like trello and asana.
 
+Recently I'm interested in painting, so I decided to draw a picture each day. You can find these pictures [on this page](/artist).
+
 You can find me on [Github](https://github.com/sailxjx), [Google+](https://plus.google.com/102588932744890343699), [Weibo](http://weibo.com/greenbeanssoup), [Douban](http://www.douban.com/people/novolander/). Feel free to send me emails via [sailxjx@gmail.com](mailto:sailxjx@gmail.com?subject=Just%20Say%20Hello%3F).
