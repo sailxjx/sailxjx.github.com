@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git://github.com/sailxjx/sailxjx.github.com.git"
   },
-  "author": "",
+  "author": {
+    "name": "Xu Jingxin",
+    "email": "sailxjx@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sailxjx/sailxjx.github.com/issues"
