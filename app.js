@@ -5,7 +5,7 @@ const router = require('koa-router')()
 const logger = require('koa-logger')
 const React = require('react')
 const ReactDOMServer = require('react-dom/server')
-const mainView = React.createFactory(require('./client/main.jsx'))
+const indexView = React.createFactory(require('./routes/index.jsx').default)
 
 const app = Koa()
 
@@ -18,7 +18,7 @@ require('koa-ejs')(app, {
 
 router.get('/', function * () {
   yield this.render('index', {
-    content: ReactDOMServer.renderToString(mainView())
+    content: ReactDOMServer.renderToString(indexView())
   })
 })
 

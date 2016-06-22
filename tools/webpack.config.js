@@ -6,11 +6,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: path.join(__dirname, './client/browser.js')
+    app: path.join(__dirname, '../routes/browser.js')
   },
   output: {
-    path: path.join(__dirname, './public'),
-    filename: '[name].js'
+    path: path.join(__dirname, '../public'),
+    filename: '[name].[hash].js'
   },
   module: {
     loaders: [
@@ -35,7 +35,7 @@ module.exports = {
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new HtmlWebpackPlugin({
-      filename: path.join(__dirname, './public/index.html'),
+      filename: path.join(__dirname, '../public/index.html'),
       template: 'index.html',
       inject: true,
       minify: {
