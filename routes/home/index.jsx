@@ -1,8 +1,9 @@
 'use strict'
 import React from 'react'
+import './index.css'
 
 export default class Home extends React.Component {
   render () {
-    return <div>Hello</div>
+    return <div>HomePage</div>
   }
 }
