@@ -1,7 +1,6 @@
-'use strict'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import index from './index.jsx'
+import index from './index'
 
 const Main = React.createFactory(index)
 

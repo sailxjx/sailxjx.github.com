@@ -20,7 +20,11 @@ let webpackConfig = {
   },
   module: {
     loaders: [
-      babelLoader
+      babelLoader,
+      {
+        test: /\.md$/,
+        loaders: ['html', 'markdown']
+      }
     ]
   },
   plugins: [
