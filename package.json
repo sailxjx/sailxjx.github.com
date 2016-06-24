@@ -23,6 +23,7 @@
   "homepage": "https://github.com/sailxjx/sailxjx.github.com",
   "devDependencies": {
     "babel-core": "^6.9.1",
+    "babel-eslint": "^6.1.0",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-runtime": "^6.9.0",
     "babel-preset-es2015": "^6.9.0",
@@ -41,17 +42,24 @@
     "koa-webpack-hot-middleware": "^1.0.3",
     "markdown-loader": "^0.1.7",
     "react": "^15.1.0",
+    "react-css-modules": "^3.7.6",
     "react-dom": "^15.1.0",
     "react-hot-loader": "^1.3.0",
     "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.1.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.10.0"
   },
   "standard": {
     "rules": {
-      "jsx-quotes": [2, "prefer-single"]
-    }
+      "jsx-quotes": [
+        2,
+        "prefer-single"
+      ]
+    },
+    "parser": "babel-eslint"
   },
   "dependencies": {}
 }

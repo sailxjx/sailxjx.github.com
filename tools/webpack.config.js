@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let babelLoader = {
   test: /\.jsx?$/,
-  loaders: ['babel-loader'],
+  loaders: ['babel'],
   exclude: /node_modules/
 }
 
@@ -53,14 +53,17 @@ let prod = process.env.NODE_ENV === 'production'
 if (prod) {
   webpackConfig.plugins.unshift(new webpack.DefinePlugin({'process.env': {NODE_ENV: JSON.stringify('production')}}))
   webpackConfig.module.loaders.unshift({
-    test: /\.css$/,
-    loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+    test: /\.styl$/,
+    loader: ExtractTextPlugin.extract(
+      'style',
+      'css?modules&importLoaders=1&localIdentName=[path][local]-[hash:base64:5]!stylus'
+    )
   })
 } else {
   webpackConfig.entry.app.unshift('webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', 'webpack/hot/only-dev-server')
   webpackConfig.module.loaders.unshift({
-    test: /\.css$/,
-    loaders: ['style-loader', 'css-loader']
+    test: /\.styl/,
+    loader: 'style!css?modules&importLoaders=1&localIdentName=[path][local]-[hash:base64:5]!stylus'
   })
   babelLoader.loaders.unshift('react-hot')
   webpackConfig.plugins.push(new webpack.HotModuleReplacementPlugin())

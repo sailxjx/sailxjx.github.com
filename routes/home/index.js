@@ -1,13 +1,17 @@
 import React from 'react'
-import './index.css'
-import homeBody from './index.md'
-import Navigation from '../../components/navigation'
+import CSSModules from 'react-css-modules'
+import homeArticle from './index.md'
+import Header from '../../components/header'
+import Article from '../../components/article'
+import styles from '../../components/app/app.styl'
 
-export default class Home extends React.Component {
+class Home extends React.Component {
   render () {
-    return <div>
-      <Navigation />
-      <div dangerouslySetInnerHTML={{__html: homeBody}}></div>
+    return <div styleName='root'>
+      <Header />
+      <Article article={homeArticle} />
     </div>
   }
 }
+
+export default CSSModules(Home, styles)
