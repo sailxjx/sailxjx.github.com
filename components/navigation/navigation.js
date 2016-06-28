@@ -10,19 +10,21 @@ class Navigation extends React.Component {
       let href = '/' + nav
       if (i === 0) href = '/'
       return <li styleName='nav-ele'>
-        <div styleName='verticl-bar'></div>
-        <div styleName='nav-handler'>
-          <div styleName='nav-dot-wrapper'>
-            <div styleName='nav-dot'></div>
-          </div>
-          <a styleName='nav-btn' href={href}>{nav.toUpperCase()}</a>
-        </div>
-      </li>
+               <div styleName='verticl-bar'></div>
+               <div styleName='nav-handler'>
+                 <div styleName='nav-dot-wrapper'>
+                   <div styleName='nav-dot'></div>
+                 </div>
+                 <a styleName='nav-btn' href={href}>
+                   {nav.toUpperCase()}
+                 </a>
+               </div>
+             </li>
     })
     // Push last verticl-bar
     rows.push(<li styleName='nav-ele'>
-      <div styleName='verticl-bar'></div>
-    </li>)
+                <div styleName='verticl-bar'></div>
+              </li>)
     return <nav styleName='root'>
              <ul styleName='nav-list'>
                {rows}

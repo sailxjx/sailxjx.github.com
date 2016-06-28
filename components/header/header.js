@@ -6,9 +6,10 @@ import Navigation from '../navigation'
 
 class Header extends React.Component {
   render () {
-    return <header styleName='root'>
-      <div styleName='brand'>CodeBean</div>
+    return <header styleName="root">
+      <div styleName="brand">CodeBean</div>
       <Navigation />
+      <div styleName="copyright">© 2016 Xu Jingxin</div>
     </header>
   }
 }
