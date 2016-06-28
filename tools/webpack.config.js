@@ -28,6 +28,7 @@ let webpackConfig = {
     ]
   },
   plugins: [
+    new webpack.IgnorePlugin(/^\/paints.*png$/),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new ExtractTextPlugin('style.[contenthash].css'),
     new webpack.optimize.UglifyJsPlugin({

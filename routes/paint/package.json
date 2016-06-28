@@ -1,0 +1,6 @@
+{
+  "name": "Paints",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./paint.js"
+}

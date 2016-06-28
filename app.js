@@ -1,5 +1,6 @@
 'use strict'
 require('babel-core/register')
+const path = require('path')
 const Koa = require('koa')
 const logger = require('koa-logger')
 const webpack = require('webpack')
@@ -20,6 +21,7 @@ require('koa-ejs')(app, {
 })
 
 app.use(logger())
+app.use(require('koa-static')(path.join(__dirname, './static')))
 app.use(function * (next) {
   fallback(this, null, function () {})
   yield next

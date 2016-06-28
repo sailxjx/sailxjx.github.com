@@ -5,7 +5,7 @@ import styles from './navigation.styl'
 
 class Navigation extends React.Component {
   render () {
-    let navs = ['about', 'blog', 'projects', 'paints']
+    let navs = ['about', 'blog', 'project', 'paint']
     let rows = navs.map((nav, i) => {
       let href = '/' + nav
       if (i === 0) href = '/'

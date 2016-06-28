@@ -1,3 +1,4 @@
-import home from './home'
+// import About from './about'
+import Paint from './paint'
 
-export default home
+export default Paint
