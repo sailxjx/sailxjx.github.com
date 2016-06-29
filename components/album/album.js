@@ -4,12 +4,8 @@ import CSSModules from 'react-css-modules'
 import styles from './album.styl'
 
 class Album extends React.Component {
-
-  static propTypes = {
-    images: React.PropTypes.array,
-    showLargeImage: function () {
-
-    }
+  showLargeImage () {
+    console.log('Show large image')
   }
 
   render () {
@@ -23,6 +19,10 @@ class Album extends React.Component {
       })}
     </div>
   }
+}
+
+Album.propTypes = {
+  images: React.PropTypes.array
 }
 
 export default CSSModules(Album, styles)

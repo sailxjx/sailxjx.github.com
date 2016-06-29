@@ -1,6 +1,7 @@
 /* eslint-disable jsx-quotes */
 import React from 'react'
 import CSSModules from 'react-css-modules'
+import Modal from '../../components/modal'
 import Header from '../../components/header'
 import Article from '../../components/article'
 import Album from '../../components/album'
@@ -40,6 +41,7 @@ class Paint extends React.Component {
       <h1>Paints</h1><Album images={images} />
     </div>
     return <div styleName="root">
+      <Modal />
       <Header />
       <Article article={article}/>
     </div>

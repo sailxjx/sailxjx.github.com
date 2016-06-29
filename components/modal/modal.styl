@@ -1,0 +1,51 @@
+.root {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(256,256,256,0.9);
+}
+
+.root-hidden {
+  display: none;
+}
+
+.container-aligner {
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 90%;
+  height: 90%;
+  background: green;
+}
+
+.close-aligner {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.close {
+  display: block;
+  font-family: FontAwesome;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 20px 20px auto;
+  color: #BDBDBD;
+  cursor: pointer;
+  &:before {
+    content: "\f00d";
+  }
+  &:hover {
+    color: #D8D8D8;
+  }
+}

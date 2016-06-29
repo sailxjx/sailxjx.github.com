@@ -24,6 +24,10 @@ let webpackConfig = {
       {
         test: /\.md$/,
         loaders: ['html', 'markdown']
+      },
+      {
+        test: /fonts.*\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
+        loader: 'file?name=fonts/[name].[ext]'
       }
     ]
   },
@@ -69,6 +73,7 @@ if (prod) {
   babelLoader.loaders.unshift('react-hot')
   webpackConfig.plugins.push(new webpack.HotModuleReplacementPlugin())
   webpackConfig.plugins.push(new webpack.NoErrorsPlugin())
+  webpackConfig.devtool = 'source-map'
 }
 
 module.exports = webpackConfig
