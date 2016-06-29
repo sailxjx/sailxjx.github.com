@@ -9,7 +9,7 @@ class Article extends Component {
   }
 
   render () {
-    return <div styleName='root' dangerouslySetInnerHTML={{__html: this.props.article}}></div>
+    return <div styleName='root'>{this.props.article}</div>
   }
 }
 
