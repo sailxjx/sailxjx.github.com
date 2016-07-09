@@ -4,12 +4,12 @@ import styles from './article.styl'
 
 class Article extends Component {
   render () {
-    return <div styleName='root'>{this.props.article}</div>
+    return <div styleName='root'>{this.props.children}</div>
   }
 }
 
 Article.propTypes = {
-  article: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired
 }
 
 export default CSSModules(Article, styles)

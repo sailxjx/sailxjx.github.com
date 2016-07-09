@@ -21,3 +21,29 @@
 .image-hover {
   cursor: pointer;
 }
+
+.close-aligner {
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.close {
+  display: block;
+  font-family: FontAwesome;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 10px 10px auto;
+  color: #BDBDBD;
+  cursor: pointer;
+  &:before {
+    content: "\f00d";
+  }
+  &:hover {
+    color: #D8D8D8;
+  }
+}
