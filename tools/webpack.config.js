@@ -39,9 +39,17 @@ let webpackConfig = {
       compress: {
         warnings: false
       }
-    }),
-    new HtmlWebpackPlugin({
-      filename: path.join(__dirname, '../public/index.html'),
+    })
+  ]
+}
+
+let prod = process.env.NODE_ENV === 'production'
+
+let getHtmlPlugins = function () {
+  let routes = prod ? ['/', '/project', '/paint'] : ['/']
+  return routes.map((route) => {
+    return new HtmlWebpackPlugin({
+      filename: path.join(__dirname, '../public', route, 'index.html'),
       template: 'index.html',
       inject: true,
       minify: {
@@ -50,10 +58,10 @@ let webpackConfig = {
         removeAttributeQuotes: true
       }
     })
-  ]
+  })
 }
 
-let prod = process.env.NODE_ENV === 'production'
+webpackConfig.plugins = webpackConfig.plugins.concat(getHtmlPlugins())
 
 if (prod) {
   webpackConfig.plugins.unshift(new webpack.DefinePlugin({'process.env': {NODE_ENV: JSON.stringify('production')}}))
