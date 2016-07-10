@@ -10,7 +10,7 @@ class Project extends React.Component {
   render () {
     return <div styleName="root">
       <Header />
-      <Article article={projectArticle} />
+      <Article>{<div dangerouslySetInnerHTML={{__html: projectArticle}}></div>}</Article>
     </div>
   }
 }

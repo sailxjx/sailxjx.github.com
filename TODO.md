@@ -1,1 +1,2 @@
 - 加入头像 https://www.typify.io/
+- 根据路由 Build 成各静态 index

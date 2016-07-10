@@ -1,7 +1,15 @@
+/* eslint-disable jsx-quotes */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import index from './index'
+import {Router, Route, browserHistory} from 'react-router'
+import About from './about'
+import Project from './project'
+import Paint from './paint'
 
-const Main = React.createFactory(index)
-
-ReactDOM.render(Main(), document.getElementById('app'))
+ReactDOM.render((
+  <Router history={browserHistory}>
+    <Route path="/" component={About}/>
+    <Route path="/project" component={Project}/>
+    <Route path="/paint" component={Paint}/>
+  </Router>
+), document.getElementById('app'))

@@ -1,4 +1,4 @@
 // import About from './about'
-import Paint from './paint'
+// import Paint from './paint'
 
-export default Paint
+// export default Paint
