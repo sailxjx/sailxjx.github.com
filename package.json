@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf public && cp -rf static/ public && NODE_ENV=production webpack --config tools/webpack.config.js",
+    "build": "rm -rf public/* && cp -rf static/ public && NODE_ENV=production webpack --config tools/webpack.config.js && echo `date '+%Y-%m-%d %H:%M:%S'` > public/.datetime",
+    "deploy": "npm run build && cd public && git add --all && git commit -am 'Site updated' && git push",
     "start": "node app.js",
     "lint": "standard"
   },
