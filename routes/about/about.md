@@ -1,11 +1,9 @@
 # About
 
-I'm a developer, my name is Xu Jingxin. I used to be a PHP developer, now most of time I develop projects with CoffeeScript. It is an amazing and mystery language, if you are in the same way as I think, we may have a talk, perhaps we have a lot in common:) In the left time I also coding in Ruby/ObjectiveC/Python/Shell and other thing else.
+I'm a program developer, my name is Xu Jingxin.
 
-I have some interesting projects, most of them are hosted on github. [sundae](https://github.com/sailxjx/sundae) is lightweight restful framework based on express, it has some interesting features borrowed from rails, such as restful route declaration and hooks of actions. [graceful-logger](https://github.com/sailxjx/graceful-logger) is a slim log module written in CoffeeScript, it outputs colorful and timestamped logs. You can define the log format by yourself. The full list of my projects are listed on the [projects](/projects) page.
+I'm familiar with nodejs/ruby/php/swift/bash/lua, and created a web framework which named [sundae](https://github.com/sailxjx/sundae), a operation automation tool which named [sneaky](https://github.com/teambition/sundae). I was the main backend developer and team leader of jianliao.com, now this program [is open sourced on github](https://jianliao.com/blog/yu-ren-jie-kuai-le-jian-liao-kai-yuan-liao/).
 
-I am currently working for [Teambition](https://www.teambition.com). It is a project management tool, just like trello and asana.
+I am currently working for [Teambition](https://www.teambition.com). It is a startup based in Shanghai that offers a SaaS collaboration tool.
 
-Recently I'm interested in painting, so I decided to draw a picture each day. You can find these pictures [on this page](/artist).
-
-You can find me on [Github](https://github.com/sailxjx), [Google+](https://plus.google.com/102588932744890343699), [Weibo](http://weibo.com/greenbeanssoup), [Douban](http://www.douban.com/people/novolander/). Feel free to send me emails via [sailxjx@gmail.com](mailto:sailxjx@gmail.com?subject=Just%20Say%20Hello%3F).
+I [write](/blog), [code](http://github.com/sailxjx), [paint](/paint). Feel free to get in touch with me via [sailxjx@gmail.com](mailto:sailxjx@gmail.com?subject=Hi).
