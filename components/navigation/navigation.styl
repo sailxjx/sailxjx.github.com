@@ -59,3 +59,26 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 768px) {
+  .root {
+    margin: 0 30px 0 0;
+    flex-direction: row;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-ele .verticl-bar {
+    display: none;
+  }
+  .nav-ele .nav-handler {
+    flex-direction: row;
+    .nav-dot-wrapper {
+      display: none;
+    }
+    .nav-btn {
+      margin: 0 0 0 25px;
+    }
+  }
+}

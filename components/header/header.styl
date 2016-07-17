@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   background: #ED786D;
-  position: absolute;
   height: 100%;
-  width: 320px;
+  min-width: 320px;
   color: #FFFFFF;
 }
 
@@ -16,4 +15,19 @@
 .copyright {
   font-size: 14px;
   margin: auto auto 30px 30px;
+}
+
+@media (max-width: 768px) {
+  .root {
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    margin: 0 0 0 30px;
+  }
+  .copyright {
+    display: none;
+  }
 }
