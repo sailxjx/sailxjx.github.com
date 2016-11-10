@@ -32,7 +32,7 @@ class Paint extends React.Component {
   render () {
     let article = <div>
       <h1>Paints</h1>
-      <Album images={images}/>
+      <Album images={images} />
     </div>
     return <div styleName="root">
       <Header />

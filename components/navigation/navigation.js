@@ -14,24 +14,24 @@ class Navigation extends React.Component {
     ]
     let rows = navs.map((nav) => {
       return <li styleName="nav-ele">
-               <div styleName="verticl-bar"></div>
-               <div styleName="nav-handler">
-                 <div styleName="nav-dot-wrapper">
-                   <div styleName="nav-dot"></div>
-                 </div>
-                 {nav}
-               </div>
-             </li>
+        <div styleName="verticl-bar" />
+        <div styleName="nav-handler">
+          <div styleName="nav-dot-wrapper">
+            <div styleName="nav-dot" />
+          </div>
+          {nav}
+        </div>
+      </li>
     })
     // Push last verticl-bar
     rows.push(<li styleName="nav-ele">
-                <div styleName="verticl-bar"></div>
-              </li>)
+      <div styleName="verticl-bar" />
+    </li>)
     return <nav styleName="root">
-             <ul styleName="nav-list">
-               {rows}
-             </ul>
-           </nav>
+      <ul styleName="nav-list">
+        {rows}
+      </ul>
+    </nav>
   }
 }
 

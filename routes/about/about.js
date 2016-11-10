@@ -9,7 +9,7 @@ class About extends React.Component {
   render () {
     return <div styleName='root'>
       <Header />
-      <Article>{<div dangerouslySetInnerHTML={{__html: aboutArticle}}></div>}</Article>
+      <Article>{<div dangerouslySetInnerHTML={{__html: aboutArticle}} />}</Article>
     </div>
   }
 }

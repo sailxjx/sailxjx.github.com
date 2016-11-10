@@ -1,5 +1,4 @@
 'use strict'
-require('babel-core/register')
 const path = require('path')
 const Koa = require('koa')
 const logger = require('koa-logger')

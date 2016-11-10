@@ -8,8 +8,8 @@ import Paint from './paint'
 
 ReactDOM.render((
   <Router history={browserHistory}>
-    <Route path="/" component={About}/>
-    <Route path="/project" component={Project}/>
-    <Route path="/paint" component={Paint}/>
+    <Route path="/" component={About} />
+    <Route path="/project" component={Project} />
+    <Route path="/paint" component={Paint} />
   </Router>
 ), document.getElementById('app'))

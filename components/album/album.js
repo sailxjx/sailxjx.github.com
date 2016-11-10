@@ -27,7 +27,7 @@ class Album extends React.Component {
   }
 
   render () {
-    let largeImage = this.state.largeImage ? <img styleName="large-image" src={this.state.largeImage}/> : ''
+    let largeImage = this.state.largeImage ? <img styleName="large-image" src={this.state.largeImage} /> : ''
     return <div styleName="album">
       {this.props.images.map((image) => {
         let imageStyle = {
@@ -37,7 +37,7 @@ class Album extends React.Component {
           <a styleName="image-hover" onClick={() => {
             this.showLargeImage(image)
           }}>
-            <div styleName="image-container" style={imageStyle}></div>
+            <div styleName="image-container" style={imageStyle} />
           </a>
         </div>
       })}
@@ -46,8 +46,7 @@ class Album extends React.Component {
         styleName="image-modal"
       >
         <div styleName="close-aligner">
-          <a styleName="close" onClick={this.closeModal}>
-          </a>
+          <a styleName="close" onClick={this.closeModal} />
         </div>
         {largeImage}
       </Modal>
