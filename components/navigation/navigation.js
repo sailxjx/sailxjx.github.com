@@ -10,6 +10,7 @@ class Navigation extends React.Component {
       <Link styleName="nav-btn" to="/">ABOUT</Link>,
       <a styleName="nav-btn" href="/blog">BLOG</a>,
       <Link styleName="nav-btn" to="/project">PROJECT</Link>,
+      <a styleName="nav-btn" href="/conf">CHEATSHEETS</a>,
       <Link styleName="nav-btn" to="/paint">PAINT</Link>
     ]
     let rows = navs.map((nav) => {
